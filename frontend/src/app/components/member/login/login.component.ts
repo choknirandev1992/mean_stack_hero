@@ -12,12 +12,12 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // any (default)
   login(LoginForm:NgForm){
-      alert(JSON.stringify(LoginForm.value));
+      let data = JSON.stringify(LoginForm.value);
+      console.log(data);
   }
 
   onSayHi(){
