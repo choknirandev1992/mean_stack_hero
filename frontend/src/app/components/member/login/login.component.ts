@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +12,19 @@ export class LoginComponent implements OnInit {
 
   myApp = 'POS';
 
-  constructor() { }
+  constructor(private router: Router, private authService: AuthService) {
 
-  ngOnInit() {}
+  }
+
+  ngOnInit() {
+    if(this.authService.isLogin()){
+       this.router.navigate(["/stock"]);
+    }
+  }
 
   // any (default)
   login(LoginForm:NgForm){
-      let data = JSON.stringify(LoginForm.value);
-      console.log(data);
+      this.authService.login("fjfjfjfjfpsefsdf");
   }
 
   onSayHi(){
