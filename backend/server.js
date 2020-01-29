@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
- 
-app.get('/', function (req, res) {
-  res.send('Hello World')
+
+app.use('/api/v1/',require('./api'))
+
+const PORT = 8081
+app.listen(PORT,()=> {
+   console.log("server running");
 })
- 
-app.listen(3000)
