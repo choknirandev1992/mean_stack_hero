@@ -10,6 +10,8 @@ import { Location } from '@angular/common';
 export class StockCreateComponent implements OnInit {
   mProduct = new Product;
   imageSrc: string | ArrayBuffer;
+
+
   constructor(private location: Location) {
      this.mProduct.name  = "";
      this.mProduct.price = 0;

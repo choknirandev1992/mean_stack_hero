@@ -23,6 +23,8 @@ import { StockHomeComponent } from './components/stock/stock-home/stock-home.com
     MenuComponent,
     FooterComponent,
     StockCreateComponent,
+
+    
     StockEditComponent,
     StockHomeComponent
   ],
