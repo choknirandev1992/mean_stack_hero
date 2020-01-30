@@ -1,10 +1,9 @@
-<!--
 <div class="div">
   <section class="content-header">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <h1>Create Product</h1>
+          <h1>Edit Product</h1>
         </div>
       </div>
     </div>
@@ -20,7 +19,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Name</label>
-                      <input name="Name" [(ngModel)]="mProduct.name" type="text" class="form-control">
+                      <input name="Name" type="text" class="form-control" [(ngModel)]="mProduct.name">
                     </div>
                   </div>
                 </div>
@@ -28,13 +27,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Price</label>
-                      <input name="price" [(ngModel)]="mProduct.price" type="number" class="form-control">
+                      <input name="price" type="number" class="form-control" [(ngModel)]="mProduct.price">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Stock</label>
-                      <input name="stock" [(ngModel)]="mProduct.stock" type="number" class="form-control">
+                      <input name="stock" type="number" class="form-control" [(ngModel)]="mProduct.stock">
                     </div>
                   </div>
                 </div>
@@ -50,7 +49,7 @@
           <div class="card card-primary">
             <div class="card-body">
               <div class="form-group">
-                <input (change)="onUpload($event)" id="upload" class="pic-upload" accept="image/*" type="file">
+                <input (change)="onUpload($event)"  id="upload" class="pic-upload" accept="image/*" type="file">
                 <a class="btn btn-app btn-block" onclick="document.getElementById('upload').click(); return false">
                   <i class="far fa-image"></i>Upload image
                 </a>
@@ -63,4 +62,3 @@
     </div>
   </section>
 </div>
--->

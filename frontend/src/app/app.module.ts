@@ -13,7 +13,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { StockCreateComponent } from './components/stock/stock-create/stock-create.component';
 import { StockEditComponent } from './components/stock/stock-edit/stock-edit.component';
 import { StockHomeComponent } from './components/stock/stock-home/stock-home.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { JWTinterceptor } from './services/jwt.intercepptor';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule,
   ],
   providers: [
+      { provide: HTTP_INTERCEPTORS, useClass: JWTinterceptor, multi: true },
   ], // services
   bootstrap: [AppComponent] // index.html
 })

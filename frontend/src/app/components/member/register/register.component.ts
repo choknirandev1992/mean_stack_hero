@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() { }
 
   register(registerForm: NgForm) {
-    this.networkService.register(registerForm.value).subscribe(
+      this.networkService.register(registerForm.value).subscribe(
       result => {
         this.router.navigate(["/login"]);
       },
