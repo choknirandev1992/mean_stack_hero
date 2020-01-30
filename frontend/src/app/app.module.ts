@@ -13,6 +13,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { StockCreateComponent } from './components/stock/stock-create/stock-create.component';
 import { StockEditComponent } from './components/stock/stock-edit/stock-edit.component';
 import { StockHomeComponent } from './components/stock/stock-home/stock-home.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,8 +24,6 @@ import { StockHomeComponent } from './components/stock/stock-home/stock-home.com
     MenuComponent,
     FooterComponent,
     StockCreateComponent,
-
-    
     StockEditComponent,
     StockHomeComponent
   ],
@@ -32,6 +31,7 @@ import { StockHomeComponent } from './components/stock/stock-home/stock-home.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
   ], // services
