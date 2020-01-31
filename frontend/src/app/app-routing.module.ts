@@ -7,6 +7,10 @@ import { StockHomeComponent } from './components/stock/stock-home/stock-home.com
 import { StockEditComponent } from './components/stock/stock-edit/stock-edit.component';
 import { AuthGuard } from './services/auth.guard';
 import { ShopHomeComponent } from './components/shop/shop-home/shop-home.component';
+import { ReportComponent } from './components/report/report.component';
+import { TransactionComponent } from './components/transaction/transaction.component';
+import { ChartComponent } from './components/chart/chart.component';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,6 +23,10 @@ const routes: Routes = [
     ],canActivate: [AuthGuard]
   },
   { path: 'shop', component: ShopHomeComponent },
+  { path: 'transaction', component: TransactionComponent },
+  { path: 'report', component: ReportComponent },
+  { path: 'chart', component: ChartComponent },
+  { path: 'user', component: UserComponent },
   { path: '**', redirectTo: 'login' },
 ];
 

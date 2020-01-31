@@ -41,7 +41,7 @@
                       </div>
                     </div>
                     <span (click)="onClickRemoveOrder(item)">
-                      <img src="assets/images/delete.png" class="nbutton_delete">
+                      <img src="{{ 'assets/images/delete.png' | imageAsset }}" class="nbutton_delete">
                     </span>
                   </div>
                 </li>
@@ -88,7 +88,6 @@
               <div *ngFor="let item of mProductArray" (click)="onClickAddOrder(item, false)" class="col-sm-6 col-md-3">
                 <div class="card card-product">
                   <div class="thumbnail">
-                    <!-- <img *ngIf="item.image !== ''" [src]="item.image | imageSecure | async" class="portrait"> -->
                     <img [src]="item.image" class="portrait">
                   </div>
                   <span

@@ -6,43 +6,43 @@
 </style>
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-  <img src="assets/images/big_banner.jpg" alt="Profile" class="img-fluid">
+  <img src="{{ 'assets/images/big_banner.jpg' | imageAsset }}" alt="Profile" class="img-fluid">
   <div class="sidebar">
       <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">MAIN NAVIGATION</li>
               <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/stock']">
+                  <a class="nav-link" [routerLink]="['/stock']" routerLinkActive="active">
                       <i class="nav-icon fas fa-cubes"></i>
                       <p>สต๊อก</p>
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/shop']">
+                  <a class="nav-link" [routerLink]="['/shop']" routerLinkActive="active">
                       <i class="nav-icon fas fa-shopping-basket"></i>
                       <p>หน้าร้าน</p>
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link">
+                  <a class="nav-link" [routerLink]="['/user']" routerLinkActive="active">
                       <i class="nav-icon fas fa-user-circle"></i>
                       <p>ผู้ใช้งาน</p>
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link">
+                  <a class="nav-link" [routerLink]="['/report']" routerLinkActive="active">
                       <i class="nav-icon fas fa-inbox"></i>
                       <p>รายงาน</p>
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link">
+                  <a class="nav-link" [routerLink]="['/transaction']" routerLinkActive="active">
                       <i class="nav-icon fas fa-money-bill"></i>
                       <p>รายการขาย</p>
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link">
+                  <a class="nav-link" [routerLink]="['/chart']" routerLinkActive="active">
                       <i class="nav-icon fas fa-chart-pie"></i>
                       <p>กราฟ</p>
                   </a>

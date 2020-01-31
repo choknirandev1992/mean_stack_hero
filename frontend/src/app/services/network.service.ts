@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ResponseLogin, ResponseRegister } from '../models/user.model';
 import { ProductResponse, Product} from '../models/product.model';
 import { environment } from 'src/environments/environment';
+import { TransectionResponse } from '../models/transection.model';
 
 @Injectable({
   providedIn: 'root'
@@ -40,10 +41,14 @@ export class NetworkService {
     return this.httpClient.put<ProductResponse>(`product/${id}`, this.makeFormData(data))
   }
 
+  getTransection(): Observable<TransectionResponse[]>{
+    return this.httpClient.get<TransectionResponse[]>('transection')
+  }
+
   getImage(name: string): string{
 
     if(!name){
-         return 'assets/images/no_photo.jpg'
+         return environment.baseUrl + '/assets/images/no_photo.jpg'
     }
 
     return `${environment.baseAPIURL}v1/product/images/${name}`;

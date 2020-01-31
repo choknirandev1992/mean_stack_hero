@@ -17,6 +17,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JWTinterceptor } from './services/jwt.intercepptor';
 import { ShopHomeComponent } from './components/shop/shop-home/shop-home.component';
 import { ShopPaymentComponent } from './components/shop/shop-payment/shop-payment.component';
+import { CustomPipe } from './pipes/custom.pipe';
+import { ChartComponent } from './components/chart/chart.component';
+import { TransactionComponent } from './components/transaction/transaction.component';
+import { ReportComponent } from './components/report/report.component';
+import { UserComponent } from './components/user/user.component';
+import { ImageAssetPipe } from './pipes/image-asset.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { ShopPaymentComponent } from './components/shop/shop-payment/shop-paymen
     StockEditComponent,
     StockHomeComponent,
     ShopHomeComponent,
-    ShopPaymentComponent
+    ShopPaymentComponent,
+    CustomPipe,
+    ChartComponent,
+    TransactionComponent,
+    ReportComponent,
+    UserComponent,
+    ImageAssetPipe
   ],
   imports: [
     BrowserModule,
