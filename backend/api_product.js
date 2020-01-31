@@ -6,6 +6,10 @@ const uuidv1 = require("uuid/v1");
 const formidable = require("formidable");
 const fs = require("fs-extra");
 
+router.get("/product/images/:name", (req, res) => {
+  res.sendfile(`${__dirname}/uploaded/images/${req.params.name}`);
+});
+
 router.get("/product", jwt.verify, async (req, res) => {
   try {
     let result = await Product.find({}).sort({ product_id: -1 });

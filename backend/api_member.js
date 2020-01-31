@@ -26,8 +26,8 @@ router.post("/auth/login", async (req, res) => {
         if(!result){
             return res.status(401).json({ token: "", message: "Username Invalid" });
         }
-
-        const passwordValid = bcryptjs.compare(password, result.password)
+         
+        const passwordValid = await bcryptjs.compare(password, result.password)
         if(!passwordValid){
             return res.status(401).json({ token: "", message: "Password Invalid" });
         }

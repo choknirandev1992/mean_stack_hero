@@ -1,11 +1,11 @@
 export class Product{
   product_id: number;
   name: string;
+  qty?: number;
   price: number;
   stock: number;
   image: any;
 }
-
 
 export interface ProductResponse {
   result:  ProductResult[] | ProductResult;
